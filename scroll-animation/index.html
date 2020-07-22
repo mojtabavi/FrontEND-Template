@@ -6,6 +6,7 @@
 
     <!-- Load animate.css from CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="./style.css"/>
 
     <!-- Load wow.min.js from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
@@ -14,10 +15,10 @@
 </head>
 <body>
 
-    <header>
+    <header class="wow fadeIn">
         <h1>
-            <div class="title"><b>Animate</b></div>
-            <div class="subtitle">On Scroll</div>
+            <div class="title wow fadeInDown"><b>Animate</b></div>
+            <div class="subtitle wow fadeInUp">On Scroll</div>
         </h1>
     </header>
 
@@ -48,6 +49,21 @@
         <div class="box" style="animation-delay: 300ms;"></div>
         <div class="box" style="animation-delay: 600ms;"></div>
     </section>
+
+
+    <script>
+        wow = new WOW(
+            {
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: '0',
+                mobile: true,
+                live: true
+            }
+        )
+
+        wow.init();
+    </script>
     
 </body>
 </html>
