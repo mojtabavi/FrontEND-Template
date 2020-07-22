@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Load animate.css from CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css"/>
     <link rel="stylesheet" href="./style.css"/>
 
     <!-- Load wow.min.js from CDN -->
@@ -24,44 +24,43 @@
 
     <section>
         <h1><b>Roll</b> Animation</h1>
-        <div class="box"></div>
-        <div class="box" style="animation-delay: 300ms;"></div>
-        <div class="box" style="animation-delay: 600ms;"></div>
+        <div class="box wow rollIn"></div>
+        <div class="box wow rollIn" style="animation-delay: 300ms;"></div>
+        <div class="box wow rollIn" style="animation-delay: 600ms;"></div>
     </section>
 
     <section>
         <h1><b>Zoom</b> Animation</h1>
-        <div class="box"></div>
-        <div class="box" style="animation-delay: 300ms;"></div>
-        <div class="box" style="animation-delay: 600ms;"></div>
+        <div class="box wow zoomIn"></div>
+        <div class="box wow zoomIn" style="animation-delay: 300ms;"></div>
+        <div class="box wow zoomIn" style="animation-delay: 600ms;"></div>
     </section>
 
     <section>
         <h1><b>Flip</b> Animation</h1>
-        <div class="box"></div>
-        <div class="box" style="animation-delay: 300ms;"></div>
-        <div class="box" style="animation-delay: 600ms;"></div>
+        <div class="box wow flipIn"></div>
+        <div class="box wow flipIn" style="animation-delay: 300ms;"></div>
+        <div class="box wow flipIn" style="animation-delay: 600ms;"></div>
     </section>
 
     <section>
         <h1><b>Rotate</b> Animation</h1>
-        <div class="box"></div>
-        <div class="box" style="animation-delay: 300ms;"></div>
-        <div class="box" style="animation-delay: 600ms;"></div>
+        <div class="box wow rotateIn"></div>
+        <div class="box wow rotateIn" style="animation-delay: 300ms;"></div>
+        <div class="box wow rotateIn" style="animation-delay: 600ms;"></div>
     </section>
 
 
     <script>
         wow = new WOW(
-            {
-                boxClass: 'wow',
-                animateClass: 'animated',
-                offset: '0',
-                mobile: true,
-                live: true
-            }
-        )
-
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
         wow.init();
     </script>
     
