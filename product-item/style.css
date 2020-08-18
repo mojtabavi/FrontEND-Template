@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #09161d;
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 420px;
+    background: #eafffa;
+    border-radius: 30px;
+    overflow: hidden;
+
+
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #6af7d8;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.card:hover::before{
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+.card::after{
+    content: 'Book';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 8em;
+    color: rgba(0,0,0,0.05);
+
+}
+
+.card .imgBx{
+    position: relative;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    z-index: 1;
+}
+
+.card .imgBx img{
+    max-width: 100%;
+    transition: 0.5s;
+}
+
+.card:hover .imgBx img {
+    max-width: 70%;
+}
+
+.card .contentBx{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.card .contentBx h3{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.card .contentBx .author {
+    font-size: 24px;
+    color: rgb(5, 4, 4);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.card .contentBx .dtails{
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background: #6af7d8;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.card:hover .contentBx .dtails{
+    top: 0;
+    opacity: 1;
+}
