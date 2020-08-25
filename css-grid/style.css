@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: calc(100% - 7rem);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 50% 50%;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.item-a{
+    display: block;
+    background: red;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.item-b {
+    background: blue;
+}
+
+.item-c{
+    background: blueviolet;
+}
+
+.item-d{
+    background: yellow
+}
